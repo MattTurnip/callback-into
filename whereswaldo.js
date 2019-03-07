@@ -4,15 +4,15 @@ function findWaldo(arr, found) {
         var waldoLocation = 0;
         if (arr[i] === "Waldo") {
             waldoLocation = i;
-            found();   // execute callback
+            found(waldoLocation);   // execute callback
       }
     }
   }
   
-  function actionWhenFound(waldoLocation) {
-    console.log("waldo is at " + waldoLocation);
+  function actionWhenFound(i) {
+    console.log("waldo is at " + i);
 
    
   }
   
-  findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+  findWaldo(["Alice", "Waldo", "Bart", "Winston"], actionWhenFound);
